@@ -79,7 +79,7 @@
     "refillCount": 50
    }
   ],
-  "expiration_date": 2025-05-03,
+  "expiration_date": "2025-05-03",
   "pharmacy": {
     "name": "Green Market SF",
     "location": "Big ATM Mall"
@@ -92,6 +92,7 @@
     "updateBy": null
   }
 }
+```
 
 ### Collection: feedback
 ```json
@@ -108,6 +109,7 @@
     "updateBy": null
   }
 }
+```
 
 ### Collection: log
 ```json
@@ -123,4 +125,4 @@
     "updateBy": null
   }
 }
-
+```
