@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Dashboard</title>
+    <link rel="icon" href="../assets/favicon.ico">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/assets/css/adminDashboard.css">
+    <link rel="stylesheet" href="/assets/css/doctorDashboard.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <!-- Utility Scripts -->
+    <script src="/js/render.js" defer></script>
+    <script src="/js/util.js" defer></script>
+
+    <!-- Component Scripts -->
+    <script src="/js/components/header.js" defer></script>
+    <script src="/js/components/footer.js" defer></script>
+    <script src="/js/components/patientRows.js" defer></script>
+
+    <!-- Services & Main Logic -->
+    <script type="module" src="/js/services/patientServices.js" defer></script>
+    <script type="module" src="/js/services/doctorDashboard.js" defer></script>
+</head>
+<body>
+<div class="container">
+    <div class="wrapper">
+
+        <!-- Header Placeholder -->
+        <div id="header"></div>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <input type="text" id="searchBar" placeholder="Search patients...">
+
+            <div class="filters">
+                <button class="button" id="todayAppointmentsBtn">Today's Appointments</button>
+                <input type="date" id="appointmentDate">
+            </div>
+
+            <table id="patientTable">
+                <thead>
+                <tr>
+                    <th>Patient ID</th>
+                    <th>Name</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                    <th>Prescription</th>
+                </tr>
+                </thead>
+                <tbody>
+                <!-- Dynamic patient rows go here -->
+                </tbody>
+            </table>
+        </main>
+        <!-- Footer Placeholder -->
+        <div id="footer"></div>
+    </div>
+</div>
+</body>
+</html>

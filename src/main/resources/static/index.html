@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Medical Appointment Portal</title>
+    <!-- Import Roboto font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- Utility JS -->
+    <script src="./js/util.js" defer></script>
+    <script src="./js/render.js" defer></script>
+    <!-- Component JS -->
+    <script src="/assets/js/components/header.js" defer></script>
+    <script src="/assets/js/components/footer.js" defer></script>
+</head>
+<body>
+<main>
+    <div class="container">
+        <div class="wrapper">
+            <!-- Header Placeholder -->
+            <div id="header"></div>
+                <!-- Main Content -->
+            <main class="main-content">
+                <h2>Select Your Role</h2>
+                <button id="adminBtn" onclick="selectRole('Admin')">Admin</button>
+                <button id="doctorBtn" onclick="selectRole('Doctor')">Doctor</button>
+                <button id="patientBtn" onclick="selectRole('Patient')">Patient</button>
+            </main>
+
+            <!-- Footer Placeholder -->
+            <div id="footer">
+
+            </div>
+            <!-- Modal -->
+            <div id="modal" class="modal">
+                <button id="closedModal">Close</button>
+                <div id="modal-body"></div>
+            </div>
+        </div>
+
+    </div>
+
+</main>
+<!-- Service JS Module -->
+<script type="module" src="../js/services/index.js" defer></script>
+</body>
+</html>
