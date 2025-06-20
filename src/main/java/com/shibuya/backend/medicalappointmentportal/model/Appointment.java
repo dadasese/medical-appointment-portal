@@ -1,4 +1,4 @@
-package com.shibuya.backend.medicalappointmentportal.models;
+package com.shibuya.backend.medicalappointmentportal.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Future;

@@ -1,0 +1,94 @@
+import com.shibuya.backend.medicalappointmentportal.Repository.AdminRepository;
+import com.shibuya.backend.medicalappointmentportal.Repository.DoctorRepository;
+import com.shibuya.backend.medicalappointmentportal.Repository.PatientRepository;
+import com.shibuya.backend.medicalappointmentportal.model.Admin;
+import com.shibuya.backend.medicalappointmentportal.model.Doctor;
+import com.shibuya.backend.medicalappointmentportal.model.Patient;
+import com.shibuya.backend.medicalappointmentportal.util.JwtUtil;
+import jakarta.servlet.http.HttpServletRequest;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Optional;
+
+@Service
+public class TokenService {
+
+    @Autowired
+    private JwtUtil jwtUtil;
+
+    @Autowired
+    private DoctorRepository doctorRepository;
+
+    @Autowired
+    private AdminRepository adminRepository;
+
+    @Autowired
+    private PatientRepository patientRepository;
+
+    /**
+     * Validates a token against the expected role and returns a map with error if invalid.
+     */
+    public Map<String, String> validateToken(String token, String expectedRole) {
+        Map<String, String> response = new HashMap<>();
+
+        try {
+            String email = jwtUtil.extractUsername(token);
+            String role = jwtUtil.extractRole(token);
+
+            if (!expectedRole.equals(role)) {
+                response.put("error", "Role mismatch.");
+                return response;
+            }
+
+            boolean isValid;
+            if (role.equals("admin")) {
+                Optional<Admin> admin = Optional.ofNullable(adminRepository.findByUsername(email));
+                isValid = admin.isPresent();
+            } else if (role.equals("doctor")) {
+                Optional<Doctor> doctor = Optional.ofNullable(doctorRepository.findByEmail(email));
+                isValid = doctor.isPresent();
+            } else {
+                response.put("error", "Unsupported role.");
+                return response;
+            }
+
+            if (!isValid) {
+                response.put("error", "Invalid user.");
+            }
+
+        } catch (Exception e) {
+            response.put("error", "Invalid token: " + e.getMessage());
+        }
+
+        return response;
+    }
+
+    /**
+     * Extracts the token from the Authorization header of an HTTP request.
+     */
+    public String extractToken(HttpServletRequest request) {
+        String header = request.getHeader("Authorization");
+        if (header != null && header.startsWith("Bearer ")) {
+            return header.substring(7);
+        }
+        return null;
+    }
+
+    /**
+     * Extracts the patient ID from the token.
+     * @param token JWT token
+     * @return patient ID if found, otherwise null
+     */
+    public Long extractPatientId(String token) {
+        try {
+            String email = jwtUtil.extractUsername(token);
+            Optional<Patient> patient = Optional.ofNullable(patientRepository.findByEmail(email));
+            return patient.map(Patient::getId).orElse(null);
+        } catch (Exception e) {
+            return null;
+        }
+    }
+}

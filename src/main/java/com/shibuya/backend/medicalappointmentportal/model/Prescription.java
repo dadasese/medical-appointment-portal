@@ -1,4 +1,4 @@
-package com.shibuya.backend.medicalappointmentportal.models;
+package com.shibuya.backend.medicalappointmentportal.model;
 
 import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotNull;

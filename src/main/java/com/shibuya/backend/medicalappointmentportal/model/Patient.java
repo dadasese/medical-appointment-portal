@@ -1,4 +1,4 @@
-package com.shibuya.backend.medicalappointmentportal.models;
+package com.shibuya.backend.medicalappointmentportal.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.Entity;
