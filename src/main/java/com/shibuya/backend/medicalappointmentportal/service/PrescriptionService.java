@@ -1,6 +1,6 @@
-package com.shibuya.backend.medicalappointmentportal.Service;
+package com.shibuya.backend.medicalappointmentportal.service;
 
-import com.shibuya.backend.medicalappointmentportal.Repository.PrescriptionRepository;
+import com.shibuya.backend.medicalappointmentportal.repository.PrescriptionRepository;
 import com.shibuya.backend.medicalappointmentportal.model.Prescription;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

@@ -1,4 +1,4 @@
-package com.shibuya.backend.medicalappointmentportal.Repository;
+package com.shibuya.backend.medicalappointmentportal.repository;
 
 import com.shibuya.backend.medicalappointmentportal.model.Doctor;
 import org.springframework.data.jpa.repository.JpaRepository;

@@ -1,9 +1,9 @@
 package com.shibuya.backend.medicalappointmentportal.controller;
 
-import com.shibuya.backend.medicalappointmentportal.Service.DTO.LoginDTO;
+import com.shibuya.backend.medicalappointmentportal.service.DTO.LoginDTO;
 import com.shibuya.backend.medicalappointmentportal.model.Patient;
-import com.shibuya.backend.medicalappointmentportal.Service.PatientService;
-import com.shibuya.backend.medicalappointmentportal.Service.Service;
+import com.shibuya.backend.medicalappointmentportal.service.PatientService;
+import com.shibuya.backend.medicalappointmentportal.service.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

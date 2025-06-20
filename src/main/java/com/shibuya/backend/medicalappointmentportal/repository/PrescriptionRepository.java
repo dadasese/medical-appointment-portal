@@ -1,4 +1,4 @@
-package com.shibuya.backend.medicalappointmentportal.Repository;
+package com.shibuya.backend.medicalappointmentportal.repository;
 
 import com.shibuya.backend.medicalappointmentportal.model.Prescription;
 import org.springframework.data.mongodb.repository.MongoRepository;

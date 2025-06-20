@@ -1,13 +1,13 @@
-package com.shibuya.backend.medicalappointmentportal.Service;
+package com.shibuya.backend.medicalappointmentportal.service;
 
-import com.shibuya.backend.medicalappointmentportal.Repository.AdminRepository;
-import com.shibuya.backend.medicalappointmentportal.Repository.DoctorRepository;
-import com.shibuya.backend.medicalappointmentportal.Repository.PatientRepository;
+import com.shibuya.backend.medicalappointmentportal.repository.AdminRepository;
+import com.shibuya.backend.medicalappointmentportal.repository.DoctorRepository;
+import com.shibuya.backend.medicalappointmentportal.repository.PatientRepository;
 import com.shibuya.backend.medicalappointmentportal.model.Admin;
 import com.shibuya.backend.medicalappointmentportal.model.Appointment;
 import com.shibuya.backend.medicalappointmentportal.model.Doctor;
 import com.shibuya.backend.medicalappointmentportal.model.Patient;
-import com.shibuya.backend.medicalappointmentportal.Service.DTO.LoginDTO;
+import com.shibuya.backend.medicalappointmentportal.service.DTO.LoginDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

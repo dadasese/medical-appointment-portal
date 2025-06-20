@@ -1,4 +1,4 @@
-package com.shibuya.backend.medicalappointmentportal.Service.DTO;
+package com.shibuya.backend.medicalappointmentportal.service.DTO;
 
 import com.shibuya.backend.medicalappointmentportal.model.Appointment;
 import lombok.Getter;
