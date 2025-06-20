@@ -1,6 +1,6 @@
 package com.shibuya.backend.medicalappointmentportal.controller;
 
-import com.shibuya.backend.medicalappointmentportal.service.TokenService;
+import com.shibuya.backend.medicalappointmentportal.Service.TokenService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

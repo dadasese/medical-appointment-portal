@@ -25,4 +25,7 @@ public class Admin {
     @NotNull(message = "password cannot be null")
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String password;
+
+    @NotNull(message = "email cannot be null")
+    private String email;
 }

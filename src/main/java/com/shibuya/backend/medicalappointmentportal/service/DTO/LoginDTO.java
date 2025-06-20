@@ -1,4 +1,4 @@
-package com.shibuya.backend.medicalappointmentportal.service.DTO;
+package com.shibuya.backend.medicalappointmentportal.Service.DTO;
 
 public class LoginDTO {
 

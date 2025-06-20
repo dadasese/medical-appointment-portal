@@ -1,4 +1,4 @@
-package com.shibuya.backend.medicalappointmentportal.service;
+package com.shibuya.backend.medicalappointmentportal.Service;
 
 import com.shibuya.backend.medicalappointmentportal.Repository.AppointmentRepository;
 import com.shibuya.backend.medicalappointmentportal.Repository.DoctorRepository;
